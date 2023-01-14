@@ -21,8 +21,11 @@ class Register(APIView):
 
 class Login(APIView):
     def post(self, request):
-        email = request.data['email']
-        password = request.data['password']
+        email = request.data.get('email', '')
+        password = request.data.get('password', '')
+
+        if email == '' or password == '':
+            raise exceptions.AuthenticationFailed('Invalid credentials')
 
         user = User.objects.filter(email=email).first()
 
