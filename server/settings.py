@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,7 +134,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': "cloudofmrguardian", 
+  'CLOUD_NAME': "cloudofmrguardian", 
   'API_KEY': "374718928426247", 
   'API_SECRET': "VLQACczNbGi80DrgLC5cSTu3RpU"
 }
