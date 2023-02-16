@@ -47,9 +47,9 @@ class Login(APIView):
         response = Response()
 
         response.set_cookie(key='refresh_token',
-                            value=refresh_token, httponly=True, samesite='None', secure=True)
+                            value=refresh_token, httponly=True, samesite='none', secure=True)
         response.set_cookie(key='access_token',
-                            value=access_token, httponly=True, samesite='None', secure=True)
+                            value=access_token, httponly=True, samesite='none', secure=True)
         response.data = UserSerializer(user).data
         return response
 
